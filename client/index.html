@@ -10,23 +10,33 @@
 
     <!-- Optional: Link to a custom CSS stylesheet for additional styling -->
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* Custom CSS for the floating card */
-        .floating-card {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            width: 250px;
-        }
-    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Pokemon</a>
-        <!-- ... Navbar content ... -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Pokedex</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tools</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Walkthrough</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TCG</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <header class="jumbotron text-center">
@@ -39,17 +49,45 @@
         </div>
     </main>
 
-    <!-- Floating Card -->
-    <div class="floating-card">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Home</h5>
-                <h5 class="card-title">Guides</h5>
-                <h5 class="card-title">Pokedex</h5>
-                <h5 class="card-title">Pokemon Tool</h5>
-                <h5 class="card-title">Guides</h5>
-                <h5 class="card-title">Walkthrough</h5>
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Floating Card 1 - Home -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Home</h5>
+                    </div>
+                </div>
             </div>
+
+            <!-- Floating Card 2 - Pokedex -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pokedex</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Card 3 - Guides -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Guides</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Card 4 - Pokemon Tools -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pokemon Tools</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more floating cards as needed -->
         </div>
     </div>
 
