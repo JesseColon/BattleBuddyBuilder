@@ -10,6 +10,52 @@
 
     <!-- Optional: Link to a custom CSS stylesheet for additional styling -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Custom CSS for the rolling images */
+        .header-image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        .header-image img {
+            position: absolute;
+            animation: roll 10s linear infinite; /* Adjust the animation duration as needed */
+        }
+
+        @keyframes roll {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+
+        <style>
+        /* Custom CSS for the lighting effect */
+        .jumbotron h1 {
+            font-size: 3rem; /* Adjust font size as needed */
+            text-transform: uppercase; /* Optional: Uppercase the text */
+            position: relative;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #00bcd4, 0 0 30px #00bcd4, 0 0 40px #00bcd4, 0 0 50px #00bcd4;
+            animation: lighting 2s ease-in-out infinite alternate; /* Adjust the animation duration as needed */
+        }
+
+        @keyframes lighting {
+            0% {
+                text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #00bcd4, 0 0 30px #00bcd4, 0 0 40px #00bcd4, 0 0 50px #00bcd4;
+            }
+            100% {
+                text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 25px #ffffff, 0 0 35px #00bcd4, 0 0 45px #00bcd4, 0 0 55px #00bcd4, 0 0 65px #00bcd4;
+            }
+        }
+    </style>
+    </style>
+</head>
+
 </head>
 <body>
      <!-- Navbar -->
@@ -40,9 +86,18 @@
     </nav>
 
     <header class="jumbotron text-center">
-        <h1>Pokemon Characters</h1>
-    </header>
+        <h1>Welcome to Battle Buddy Builder</h1>
+           <!-- Header with Rolling Images -->
+    <div class="header-image">
+        <img src="pokemon1.jpg" alt="Pokemon 1">
+        <img src="pokemon2.jpg" alt="Pokemon 2">
+        <img src="pokemon3.jpg" alt="Pokemon 3">
+        <!-- Add more image elements with Pokemon images -->
+    </div>
 
+    </header>
+                <h2>Here you will be able to create your own Pokemon team. You have the abilitiy 
+                 to create a team of 6, Pokemons and battle with others!</h2>
     <main class="container">
         <div class="row">
             <!-- Your Pokemon card sections go here -->
