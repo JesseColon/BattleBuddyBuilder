@@ -53,10 +53,12 @@
         }
 
    /* Custom CSS for the background image */
-   .header-with-bg {
+   .jumbotron {
             background-image: url('/images/main-pokemon.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
             background-size: cover;
             background-position: center;
+            height: 650px;
+            width: auto;
             color: #fff; /* Text color for better visibility */
             padding: 20px; /* Adjust padding as needed */
         }
@@ -97,62 +99,83 @@
 
     <header class="jumbotron text-center">
         <h1>Welcome to Battle Buddy Builder</h1>
-           <!-- Header with Rolling Images -->
-    <div class="header-image">
-        <img src="/images/pokemon1.jpg" alt="Pokemon 1">
-        <img src="/images/pokemon2.jpg" alt="Pokemon 2">
-        <img src="pokemon3.jpg" alt="Pokemon 3">
-        <!-- Add more image elements with Pokemon images -->
-    </div>
 
     </header>
+        
                 <h2>Here you will be able to create your own Pokemon team. You have the abilitiy 
                  to create a team of 6, Pokemons and battle with others!</h2>
+                      <!-- Header with Rolling Images -->
+             <div class="header-image">
+                <img src="/images/pokemon1.jpg" alt="Pokemon 1">
+                <img src="/images/pokemon2.jpg" alt="Pokemon 2">
+                <img src="pokemon3.jpg" alt="Pokemon 3">
+                <!-- Add more image elements with Pokemon images -->
+            </div>
     <main class="container">
         <div class="row">
             <!-- Your Pokemon card sections go here -->
         </div>
     </main>
 
-    <div class="container mt-4">
+    <div class="container">
         <div class="row">
-            <!-- Floating Card 1 - Home -->
-            <div class="col-md-3">
-                <div class="card">
+            <!-- Left Side: Cards -->
+            <div class="col-md-6">
+                <!-- Card 1 -->
+                <div class="card mb-4">
+                    <img src="/images/pokemon4.jpg" class="card-img-top" alt="Pokemon 1">
                     <div class="card-body">
-                        <h5 class="card-title">Home</h5>
+                        <h2 class="card-title">Pikachu</h2>
+                        <p class="card-text">Electric-type Pokemon</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Floating Card 2 - Pokedex -->
-            <div class="col-md-3">
-                <div class="card">
+                <!-- Card 2 -->
+                <div class="card mb-4">
+                    <img src="pokemon2.jpg" class="card-img-top" alt="Pokemon 2">
                     <div class="card-body">
-                        <h5 class="card-title">Pokedex</h5>
+                        <h2 class="card-title">Charizard</h2>
+                        <p class="card-text">Fire/Flying-type Pokemon</p>
                     </div>
                 </div>
+
+                <!-- Add more card sections for other Pokemon characters -->
             </div>
 
-            <!-- Floating Card 3 - Guides -->
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Guides</h5>
+            <!-- Right Side: Container -->
+            <div class="col-md-6">
+                <div class="container mt-4">
+                    <!-- Floating Card 1 - Home -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Home</h5>
+                        </div>
                     </div>
+
+                    <!-- Floating Card 2 - Pokedex -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pokedex</h5>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 3 - Guides -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Guides</h5>
+                        </div>
+                    </div>
+
+                    <!-- Floating Card 4 - Pokemon Tools -->
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Pokemon Tools</h5>
+                        </div>
+                    </div>
+
+                    <!-- Add more floating cards as needed -->
                 </div>
             </div>
-
-            <!-- Floating Card 4 - Pokemon Tools -->
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pokemon Tools</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Add more floating cards as needed -->
         </div>
     </div>
 
