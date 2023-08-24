@@ -1,4 +1,4 @@
-.card-mb-4 {
+.card {
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -11,3 +11,13 @@
     border: 2px solid rgba(0,0,0,.125);
     border-radius: 3.25rem;
 }
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    border-radius: 3.25rem;
+}
+
+.card.mb-4{
+    border-radius: 3.25rem;
+}
+

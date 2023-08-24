@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pokemon Team Builder</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional: Link to a custom CSS stylesheet for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Set the background color */
+        body {
+            background-color: #5686ef;
+        }
+        
+        .card.mb-4 {
+            border-radius: 3.25rem;
+        }
+
+        input {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pokémon Team Builder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TCG</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron text-center">
+        <h1>Welcome to Pokemon Team Builder</h1>
+    </header>
+
+    <main class="container">
+        <div class="row justify-content-center">
+            <form>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                  </div>
+                </div>
+                <fieldset class="row mb-3">
+                  <legend class="col-form-label col-sm-2 pt-0">Option</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <label class="form-check-label" for="gridRadios1">
+                        Login as Guest
+                      </label>
+                    </div>
+                    <br>
+                    <div class="text-center"> <!-- Center the button -->
+                        <button type="submit" class="btn btn-primary">Sign in</button> 
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2023 Battle Buddy Builder</p>
+    </footer>
+
+    <!-- Link to Bootstrap JavaScript and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
