@@ -4,8 +4,7 @@ function LoginSignup() {
     const [formData, setFormData] = useState({
         username: '',
         password: '',
-        confirmPassword: '',
-        //profilePicture: ''
+        confirmPassword: ''
     });
 
     const HandleInputChange = (event) => {
