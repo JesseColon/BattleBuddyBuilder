@@ -1,16 +1,20 @@
-import { useEffect } from 'react';
-import CarComponent from './components/CarComponent';
-// Importing our context provider which will make our global state available to child components
-import CarProvider from './utils/CarContext';
+import AccountDisplay from './components/AccountDisplay';
+import Header from './components/Header';
+import './App.css'
+import { AccountProvider } from './utils/GlobalState';
 
-export default function App() {
-  useEffect(() => {
-    document.title = 'Digital Garage';
-  }, []);
+import Nav from './components/Nav';
 
+function App() {
   return (
-    <CarProvider>
-      <CarComponent />
-    </CarProvider>
+    <AccountProvider>
+      <div className="App">
+        <Header />
+        <Nav/>
+        <AccountDisplay />
+      </div>
+    </AccountProvider>
   );
 }
+
+export default App;
