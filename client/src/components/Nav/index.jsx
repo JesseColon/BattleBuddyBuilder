@@ -75,7 +75,7 @@ function Nav() {
         // </ul>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Home</a>
+        <Link class="navbar-brand" to="/">Home</Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -109,24 +109,15 @@ function Nav() {
   }
 
   return (
-    <header >
-      {/* <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
-        </Link>
-      </h1> */}
-
-      <nav>
-        {showNavigation()}
-      </nav>
-{/* Here is wehre I have the main image */}
+    <header>
+    <nav>{showNavigation()}</nav>
+    {/* Conditionally render the header based on authentication state */}
+    {Auth.loggedIn() ? null : (
       <header class="jumbotron text-center">
         <h1>Welcome to Battle Buddy Builder</h1>
-
-    </header>
-
-    </header>
+      </header>
+    )}
+  </header>
     
   );
 }
