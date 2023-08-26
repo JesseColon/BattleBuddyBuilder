@@ -1,9 +1,11 @@
 {/* This is the navigation page */}
 
 import Auth from "../../utils/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
+{/*this feature set up the header for the home page*/}
+  const location = useLocation();
 
   function showNavigation() {
     console.log(Auth.loggedIn());
@@ -108,16 +110,21 @@ function Nav() {
     }
   }
 
-  return (
-    <header>
-    <nav>{showNavigation()}</nav>
-    {/* Conditionally render the header based on authentication state */}
-    {Auth.loggedIn() ? null : (
-      <header class="jumbotron text-center">
-        <h1>Welcome to Battle Buddy Builder</h1>
-      </header>
-    )}
-  </header>
+ // Check if the user is on the home page (location.pathname === '/')
+ const isHomePage = location.pathname === '/';
+
+ return (
+   <header>
+     <nav>{showNavigation()}</nav>
+     {/* Conditionally render the header based on authentication state and route */}
+     {Auth.loggedIn() && !isHomePage ? null : (
+       <header class="jumbotron text-center">
+         <h1>Welcome to Battle Buddy Builder</h1>
+       </header>
+     )}
+   </header>
+
+  
     
   );
 }
