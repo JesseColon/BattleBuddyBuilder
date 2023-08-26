@@ -10,6 +10,17 @@ const Home = () => {
       {/* <Cart /> */}
     
       {/* Cards */}
+
+      <div className= "container">
+    <h1>Hello we are Battle Buddy Builder</h1>
+    <h2>Our site allows you to create your own Pokemon Teams!!
+      You will be able to select from varius versions and compare 
+      their strengths and weaknesses. 
+    </h2>
+
+
+      </div>
+
       <div className="container">
         <CardGroup>
           <Card>
