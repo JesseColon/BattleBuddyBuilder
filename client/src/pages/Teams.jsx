@@ -16,6 +16,8 @@ const Teams = () => {
   const [selectedPokemon4, setSelectedPokemon4] = useState('');
   const [selectedPokemon5, setSelectedPokemon5] = useState('');
 
+  
+
   // Function to handle dropdown selection for each menu
   const handleDropdownSelect = (name, menuNumber) => {
     switch (menuNumber) {
@@ -224,7 +226,10 @@ const Teams = () => {
         </div>
       </div>
     </div>
+
+
   );
-};
+}
+
 
 export default Teams;
