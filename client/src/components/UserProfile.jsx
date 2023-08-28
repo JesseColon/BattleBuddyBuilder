@@ -1,8 +1,5 @@
 
-// here i want to create a component that will display the user profile. displaying the user profile will be done by fetching the user data from the database and displaying it on the screen.
-// the user profile will be displayed in the user profile page. the user profile page will be displayed when the user clicks on the user profile button in the navigation bar.
-//the user profile page will display the users profile picture, username, there set pokemon team, and a list of alternative pokemon teams that they have created.
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import './UserProfile.css';
 
 function UserProfile() {
@@ -52,7 +49,7 @@ function UserProfile() {
                 <div className="user-profile-body-alternative-teams">
                     <h2>Alternative Teams</h2>
                     <div className="user-profile-body-alternative-teams-alternative-team">
-                        {/* Render alternative teams similar to the main team, perhaps with some variation */}
+                        {}
                     </div>
                 </div>
             </div>
