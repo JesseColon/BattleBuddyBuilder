@@ -6,5 +6,9 @@ const teamSchema = new Schema({
       required: true,
       trim: true
     },
-    pokemon: [Pokemon.schema]
+    pokemon: [Pokemon.schema],
 });
+
+const Team = model('Team', teamSchema);
+
+module.exports = Team;
