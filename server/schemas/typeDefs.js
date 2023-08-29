@@ -20,31 +20,22 @@ const typeDefs = `
 
   type User {
     _id: ID
-    firstName: String
-    lastName: String
+    username: String
     email: String
     teams: [Team]
   }
 
-  type Auth {
-    token: ID
-    user: User
+  type Checkout {
+    session: ID
   }
 
-  type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
+  type Auth {
+    token: ID!
     user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;

@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-import Picachu from './pages/Picachu';
+import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
 
@@ -33,8 +33,8 @@ const router = createBrowserRouter([
         path: '/success',
         element: <Success />
       },{
-        path: '/picachu',
-        element: <Picachu />
+        path: '/pikachu',
+        element: <Pikachu />
       },{
         path: '/teams',
         element: <Teams />
