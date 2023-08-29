@@ -1,23 +1,21 @@
 const typeDefs = `
-  type Category {
+
+  type Team {
     _id: ID
     name: String
+    pokemons: [Pokemon]
   }
 
-  type Product {
+  type Pokemon {
     _id: ID
-    name: String
-    description: String
-    image: String
-    quantity: Int
-    price: Float
-    category: Category
+    pokeID: Int!
+    itemID: Int
+    moves: [Move]
   }
 
-  type Order {
+  type Move {
     _id: ID
-    purchaseDate: String
-    products: [Product]
+    moveID: Int!
   }
 
   type User {
