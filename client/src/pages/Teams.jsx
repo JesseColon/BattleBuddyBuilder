@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
 
+
 const Teams = () => {
   // Arrays of Pokémon names
   const pokemonNames1 = ["", "Pikachu", "Charizard", "Bulbasaur", "Squirtle", "Jigglypuff"];
@@ -229,9 +230,8 @@ const Teams = () => {
     </div>
 
 
-  );
-}
-
+)
+              };
 
 
 export default Teams;

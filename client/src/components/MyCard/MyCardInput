@@ -1,0 +1,71 @@
+import React, { useState, useEffect } from 'react';
+
+const MyApiComponent = () => {
+  const [userInput, setUserInput] = useState(''); // State to store user input
+  const [selectedOption, setSelectedOption] = useState('Option1'); // State to store selected option
+  const [apiResult, setApiResult] = useState(null); // State to store API result
+  const options = ['Option1', 'Option2', 'Option3', 'Option4', 'Option5', 'Option6', 'Option7'];
+
+  // Function to handle changes in the user input
+  const handleUserInputChange = (event) => {
+    setUserInput(event.target.value);
+  };
+
+  // Function to handle changes in the selected option
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  // Function to make an API call based on user input and selected option
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`https://api.example.com/data?input=${userInput}&option=${selectedOption}`);
+      const data = await response.json();
+      setApiResult(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  // Use useEffect to make the API call whenever userInput or selectedOption changes
+  useEffect(() => {
+    if (userInput && selectedOption) {
+      fetchData();
+    }
+  }, [userInput, selectedOption]);
+
+  return (
+    <div>
+      <h1>API Data Fetcher</h1>
+      <div>
+        <label htmlFor="userInput">User Input:</label>
+        <input
+          type="text"
+          id="userInput"
+          value={userInput}
+          onChange={handleUserInputChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="options">Select an Option:</label>
+        <select id="options" value={selectedOption} onChange={handleOptionChange}>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <h2>API Result:</h2>
+        {apiResult ? (
+          <pre>{JSON.stringify(apiResult, null, 2)}</pre>
+        ) : (
+          <p>No data to display</p>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MyApiComponent;
