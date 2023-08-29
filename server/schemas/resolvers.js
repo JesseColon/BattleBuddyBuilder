@@ -28,8 +28,8 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
+          path: 'teams',
+          populate: 'team'
         });
 
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
@@ -39,14 +39,14 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    order: async (parent, { _id }, context) => {
+    team: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
+          path: 'team.pokemon',
+          populate: 'pokemon'
         });
 
-        return user.orders.id(_id);
+        return user.teams.id(_id);
       }
 
       throw AuthenticationError;
@@ -95,13 +95,13 @@ const resolvers = {
 
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addTeam: async (parent, { pokemons }, context) => {
       if (context.user) {
-        const order = new Order({ products });
+        const team = new Team({ pokemons });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        await User.findByIdAndUpdate(context.user._id, { $push: { pokemons: pokemon } });
 
-        return order;
+        return team;
       }
 
       throw AuthenticationError;

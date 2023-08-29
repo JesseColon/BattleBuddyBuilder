@@ -23,11 +23,7 @@ const typeDefs = `
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
-  }
-
-  type Checkout {
-    session: ID
+    teams: [Team]
   }
 
   type Auth {
