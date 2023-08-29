@@ -1,5 +1,4 @@
 {
-
     "name": "battle-buddy-builder",
     "version": "1.0.0",
     "description": "",
@@ -21,4 +20,6 @@
         "graphql": "^16.8.0",
         "pokemon-showdown": "^0.11.9"
     }
+
+}
 
