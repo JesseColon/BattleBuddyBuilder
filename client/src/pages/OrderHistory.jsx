@@ -1,51 +1,115 @@
 import { Link } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
 
-function OrderHistory() {
-  const { data } = useQuery(QUERY_USER);
-  let user;
+import React, { useState } from 'react';
+import { Table, FormControl } from 'react-bootstrap';
 
-  if (data) {
-    user = data.user;
-  }
+const YourTableComponent = ({ items, page_number, page_size }) => {
+  const [sortKey, setSortKey] = useState('');
+  const [sortDirection, setSortDirection] = useState(1);
+  const [filterValues, setFilterValues] = useState({
+    id: '',
+    name: '',
+    munit: '',
+    rate: '',
+  });
+
+  const handleColumnSort = (key) => {
+    setSortKey(key);
+    setSortDirection(sortKey === key ? -sortDirection : 1);
+  };
+
+  const handleColumnSortCss = (key) => {
+    if (sortKey === key) {
+      return sortDirection === 1 ? 'fa-sort-asc' : 'fa-sort-desc';
+    }
+    return 'fa-sort';
+  };
+
+  const onChangeHandler = (key, e) => {
+    const newFilterValues = { ...filterValues };
+    newFilterValues[key] = e.target.value;
+    setFilterValues(newFilterValues);
+  };
+
+  const filteredItems = items.filter((item) => {
+    return (
+      item.id.includes(filterValues.id) &&
+      item.name.includes(filterValues.name) &&
+      item.munit.includes(filterValues.munit) &&
+      item.rate.includes(filterValues.rate)
+    );
+  });
 
   return (
-    <>
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
-
-        {user ? (
-          <>
-            <h2>
-              Order History for {user.firstName} {user.lastName}
-            </h2>
-            {user.orders.map((order) => (
-              <div key={order._id} className="my-2">
-                <h3>
-                  {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-                </h3>
-                <div className="flex-row">
-                  {order.products.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} />
-                        <p>{name}</p>
-                      </Link>
-                      <div>
-                        <span>${price}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </>
-        ) : null}
-      </div>
-    </>
+    <div>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th onClick={() => handleColumnSort('id')}>
+              <b>Id</b> <i className={`fa fa-fw ${handleColumnSortCss('id')}`}></i>
+            </th>
+            <th onClick={() => handleColumnSort('name')}>
+              <b>Name</b> <i className={`fa fa-fw ${handleColumnSortCss('name')}`}></i>
+            </th>
+            <th onClick={() => handleColumnSort('munit')}>
+              <b>Munit</b> <i className={`fa fa-fw ${handleColumnSortCss('munit')}`}></i>
+            </th>
+            <th onClick={() => handleColumnSort('rate')}>
+              <b>Rate</b> <i className={`fa fa-fw ${handleColumnSortCss('rate')}`}></i>
+            </th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>
+              <FormControl
+                type="text"
+                value={filterValues.id}
+                onChange={(e) => onChangeHandler('id', e)}
+              />
+            </th>
+            <th>
+              <FormControl
+                type="text"
+                value={filterValues.name}
+                onChange={(e) => onChangeHandler('name', e)}
+              />
+            </th>
+            <th>
+              <FormControl
+                type="text"
+                value={filterValues.munit}
+                onChange={(e) => onChangeHandler('munit', e)}
+              />
+            </th>
+            <th>
+              <FormControl
+                type="text"
+                value={filterValues.rate}
+                onChange={(e) => onChangeHandler('rate', e)}
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {filteredItems.map((item, index) => (
+            <tr key={index}>
+              <th>{(index + 1) + (page_number - 1) * page_size}</th>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.munit}</td>
+              <td>{item.rate}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </div>
   );
-}
+};
 
-export default OrderHistory;
+export default YourTableComponent;
+
+
+

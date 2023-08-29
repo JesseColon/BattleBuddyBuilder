@@ -13,6 +13,8 @@ import OrderHistory from './pages/OrderHistory';
 import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
+import Table from "./components/Nav/Table";
+import CreateTeams from './pages/CreateTeams';
 
 const router = createBrowserRouter([
   {
@@ -39,12 +41,19 @@ const router = createBrowserRouter([
         path: '/teams',
         element: <Teams />
       }, {
+        path: '/orderHistory',
+        element: <OrderHistory />
+      }, {
         path: '/pokemonTeamB',
         element: <PokemonTeamB />
       },
-       {
-        path: '/orderHistory',
-        element: <OrderHistory />
+      {
+        path: '/createTeams',
+        element: <CreateTeams/>
+      },
+        {
+        path: '/table',
+        element: <Table />
       }, {
         path: '/products/:id',
         element: <Detail />

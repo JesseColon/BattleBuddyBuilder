@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
+import { Dropdown, ButtonGroup, Button } from 'react-bootstrap';
 
 
 const Teams = () => {
@@ -17,8 +17,11 @@ const Teams = () => {
   const [selectedPokemon4, setSelectedPokemon4] = useState('');
   const [selectedPokemon5, setSelectedPokemon5] = useState('');
 
-  
-
+  // States for the API input
+  const [stat, setStat] = useState('');
+  const [moves, setMoves] = useState('');
+  const [sprite, setSprite] = useState('');
+  const [power, setPower] = useState('');
 
   // Function to handle dropdown selection for each menu
   const handleDropdownSelect = (name, menuNumber) => {
@@ -56,7 +59,7 @@ const Teams = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6">
-            <h1>We can add context here</h1>
+          <h1>We can add context here</h1>
           <div className="card mb-4">
             <h1>Or add images - tell me what to add</h1>
             {/* Existing card content */}
@@ -229,9 +232,9 @@ const Teams = () => {
       </div>
     </div>
 
+    
 
-)
-              };
-
+  );
+};
 
 export default Teams;

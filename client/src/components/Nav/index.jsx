@@ -42,13 +42,18 @@ function Nav() {
               </Link>
             </li>
             <li class="nav-item">
-              <Link class="nav-link" to="/picachu">
-                Picachu
+              <Link class="nav-link" to="/pikachu">
+                Pikachu
               </Link>
             </li>
             <li class="nav-item">
               <Link to="/" onClick={() => Auth.logout()} className="nav-link">
                 Logout
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/OrderHistory">
+                Oder History
               </Link>
             </li>
           </ul>
