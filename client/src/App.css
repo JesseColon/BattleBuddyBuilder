@@ -1,0 +1,39 @@
+
+        /* Custom CSS for the lighting effect */
+        .jumbotron h1 {
+          font-size: 3rem; /* Adjust font size as needed */
+          text-transform: uppercase; /* Optional: Uppercase the text */
+          position: relative;
+          text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #00bcd4, 0 0 30px #00bcd4, 0 0 40px #00bcd4, 0 0 50px #00bcd4;
+          animation: lighting 2s ease-in-out infinite alternate; /* Adjust the animation duration as needed */
+      }
+
+      @keyframes lighting {
+          0% {
+              text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #00bcd4, 0 0 30px #00bcd4, 0 0 40px #00bcd4, 0 0 50px #00bcd4;
+          }
+          100% {
+              text-shadow: 0 0 5px #ffffff, 0 0 15px #ffffff, 0 0 25px #ffffff, 0 0 35px #00bcd4, 0 0 45px #00bcd4, 0 0 55px #00bcd4, 0 0 65px #00bcd4;
+          }
+      }
+
+/* Custom CSS for the background image */
+.jumbotron {
+  background-image: url('./images/background2.jpg'); /* Replace 'your-image-url.jpg' with the actual image URL */
+  background-size: contain;
+  background-position: center;
+  height: 558px;
+  width: auto;
+  color: #fff; /* Text color for better visibility */
+  padding: 51px; /* Adjust padding as needed */
+}
+
+
+.navbar{
+height: 85px;
+}
+
+/* Login Section colors and buttons */
+.container.container.my-1{
+    background-color: aliceblue;
+}

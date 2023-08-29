@@ -1,10 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-    server: {
+  build: {
+    rollupOptions: {
+      external: ['other-external-dep'], // any other external deps you might have
+      output: {
+        globals: {
+          'other-external-dep': 'OtherExternalDep'
+        }
+      }
+    }
+  },
+  server: {
     port: 3000,
     open: true,
     proxy: {
@@ -15,4 +24,4 @@ export default defineConfig({
       },
     }
   }
-})
+});
