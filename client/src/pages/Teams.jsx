@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 
 const Teams = () => {
   // Arrays of Pokémon names
@@ -231,10 +231,15 @@ const Teams = () => {
         </div>
       </div>
     </div>
+  ); // Add the missing </div> here
+}
 
-    
-
+function AnyComponent() {
+  return (
+    <div>
+      <Link to="/result">Go to Result Page</Link>
+    </div>
   );
-};
+}
 
 export default Teams;
