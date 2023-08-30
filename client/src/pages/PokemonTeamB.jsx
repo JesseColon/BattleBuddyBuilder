@@ -3,26 +3,16 @@
 import React from 'react';
 // Import your OptionTable component here
 
+import OptionTable from "./OptionTable";
 
 
 const PokemonTeamB = () => {
   return (
     <div>
-       <div>
-      {/* Include the OptionTable component here */}
-      <OptionTable />
+    
+<OptionTable/>
+<GridTable/>
 
-      <main className="container">
-        <div className="row">
-          {/* Your Pokemon team builder options go here */}
-          <div className="col-md-4">
-            {/* Option 1 */}
-            {/* Rest of your code */}
-          </div>
-          {/* Rest of your code */}
-        </div>
-      </main>
-    </div>
 
       <main className="container">
         <div className="row">
@@ -83,7 +73,12 @@ const PokemonTeamB = () => {
           </div>
         </div>
       </main>
+
+      {/* Add the OptionTable component here
+      <OptionTable /> */}
+
     </div>
+    
   );
 };
 

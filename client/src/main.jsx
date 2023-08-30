@@ -15,6 +15,7 @@ import OptionTable from './pages/OptionTable';
 
 
 import PokemonTeamB from './pages/PokemonTeamB';
+import GridTabel from './pages/GridTable';
 
 
 const router = createBrowserRouter([
@@ -47,7 +48,10 @@ const router = createBrowserRouter([
       }, {
         path: '/optionTable',
         element: <OptionTable/>
-      }, {
+      },{
+        path: '/gridTable',
+        element: <GridTable/>
+      },      {
         path: '/products/:id',
         element: <Detail />
       }
