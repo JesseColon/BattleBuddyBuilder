@@ -14,6 +14,7 @@ import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
 import OptionTable from './pages/OptionTable'; 
+import PokemonCard from '../src/components/Nav/PokemonCard';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,9 @@ const router = createBrowserRouter([
       },{
         path: '/optionTable',
         element: <OptionTable/>
+      },{
+        path: '/pokemonCard',
+        element: <PokemonCard/>
       },
        {
         path: '/orderHistory',

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
+import OptionTable from "./OptionTable";
+import PokemonCard from '../components/Nav/PokemonCard';
+
 
 const Teams = () => {
   // Arrays of Pokémon names
@@ -223,7 +226,17 @@ const Teams = () => {
           </div>
         </div>
       </div>
-    </div>
+    <br>
+    </br>
+      <PokemonCard/>
+      <br>
+      </br>
+<OptionTable/>
+{/* <GridTable/> */}
+
+</div>
+
+
   );
 };
 
