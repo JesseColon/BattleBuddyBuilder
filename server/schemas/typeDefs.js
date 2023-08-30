@@ -34,10 +34,17 @@ const typeDefs = `
     user: User
   }
 
+  type Query {
+    user: User
+    team(user:ID): [Team]
+  }
+
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-  }
+    addTeam(name: String!, pokemons: Pokemon!): Team
+    updateUser
+    addTeam(name: String!, pokemons: Pokemon!): Team
 `;
 
 module.exports = typeDefs;
