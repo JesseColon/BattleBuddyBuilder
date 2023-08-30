@@ -1,21 +1,18 @@
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom/client'
+import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home';
-
+import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
-
-
+import Signup from './pages/Signup';
+import Success from './pages/Success';
+import OrderHistory from './pages/OrderHistory';
 import Pikachu from './pages/Pikachu';
-import OptionTable from './pages/OptionTable'; 
-// import CreateTeams from './pages/CreateTeams';
-
+import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
-
-
 
 const router = createBrowserRouter([
   {
@@ -30,17 +27,27 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login />
       }, {
-        path: '/createTeams',
-        element: <CreateTeams/>
+        path: '/signup',
+        element: <Signup />
+      }, {
+        path: '/success',
+        element: <Success />
       },{
         path: '/pikachu',
         element: <Pikachu />
+      },{
+        path: '/teams',
+        element: <Teams />
       }, {
         path: '/pokemonTeamB',
         element: <PokemonTeamB />
+      },
+       {
+        path: '/orderHistory',
+        element: <OrderHistory />
       }, {
-        path: '/optionTable',
-        element: <OptionTable/>
+        path: '/products/:id',
+        element: <Detail />
       }
     ]
   }
