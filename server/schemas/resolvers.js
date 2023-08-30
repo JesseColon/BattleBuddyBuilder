@@ -91,13 +91,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addTeam: async (parent, { pokemons }, context) => {
       if (context.user) {
-        const order = new Order({ products });
+        const team = new Team({ pokemons });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        await User.findByIdAndUpdate(context.user._id, { $push: { teams: team } });
 
-        return order;
+        return team;
       }
 
       throw AuthenticationError;
@@ -109,10 +109,9 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    updateTeam: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
+    updateTeam: async (parent, { _id }) => {
 
-      return await Pokemon.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Pokemon.findByIdAndUpdate(_id, { new: true });
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
