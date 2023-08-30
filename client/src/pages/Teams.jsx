@@ -1,10 +1,11 @@
 import  { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { getAllPokemon } from './utils/pokemonData'
 
 const Teams = () => {
   // Arrays of Pokémon names
-  const pokemonNames1 = ["", "Pikachu", "Charizard", "Bulbasaur", "Squirtle", "Jigglypuff"];
+  const pokemonNames1 = [getAllPokemon()];
   const pokemonNames2 = ["", "Mewtwo", "Gengar", "Dragonite", "Vaporeon", "Snorlax"];
   const pokemonNames3 = ["", "Machamp", "Lapras", "Arcanine", "Mew", "Alakazam"];
   const pokemonNames4 = ["", "Gyarados", "Golem", "Aerodactyl", "Kabutops", "Omastar"];
