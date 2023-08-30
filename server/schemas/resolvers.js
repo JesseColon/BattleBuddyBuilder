@@ -1,35 +1,14 @@
-const { User, Product, Category, Order } = require('../models');
+const { User, Team, Pokemon, Move } = require('../models');
+//const Pokemon = require('../models/Pokemon');
 const { signToken, AuthenticationError } = require('../utils/auth');
-const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
-    categories: async () => {
-      return await Category.find();
-    },
-    products: async (parent, { category, name }) => {
-      const params = {};
-
-      if (category) {
-        params.category = category;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name
-        };
-      }
-
-      return await Product.find(params).populate('category');
-    },
-    product: async (parent, { _id }) => {
-      return await Product.findById(_id).populate('category');
-    },
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
+          path: 'teams',
+          populate: 'team'
         });
 
         user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
@@ -39,14 +18,14 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    order: async (parent, { _id }, context) => {
+    team: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
+          path: 'team.pokemon',
+          populate: 'pokemon'
         });
 
-        return user.orders.id(_id);
+        return user.teams.id(_id);
       }
 
       throw AuthenticationError;
@@ -89,19 +68,18 @@ const resolvers = {
     }
   },
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+    addUser: async (parent, { username, email, password }) => {
+      const user = await User.create({ username, email, password });
       const token = signToken(user);
-
       return { token, user };
     },
-    addOrder: async (parent, { products }, context) => {
+    addTeam: async (parent, { pokemons }, context) => {
       if (context.user) {
-        const order = new Order({ products });
+        const team = new Team({ pokemons });
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
+        await User.findByIdAndUpdate(context.user._id, { $push: { teams: team } });
 
-        return order;
+        return team;
       }
 
       throw AuthenticationError;
@@ -113,10 +91,9 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    updateProduct: async (parent, { _id, quantity }) => {
-      const decrement = Math.abs(quantity) * -1;
+    updateTeam: async (parent, { _id }) => {
 
-      return await Product.findByIdAndUpdate(_id, { $inc: { quantity: decrement } }, { new: true });
+      return await Pokemon.findByIdAndUpdate(_id, { new: true });
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
@@ -134,8 +111,8 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    }
-  }
+    },
+  },
 };
 
 module.exports = resolvers;
