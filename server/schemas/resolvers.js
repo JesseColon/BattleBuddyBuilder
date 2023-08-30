@@ -1,5 +1,5 @@
 const { User, Team, Pokemon, Move } = require('../models');
-//const Pokemon = require('../models/Pokemon');
+const Pokemon = require('../models/Pokemon');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -16,7 +16,7 @@ const resolvers = {
         return user;
       }
 
-      throw AuthenticationError;
+      throw new AuthenticationError('no user found');
     },
     team: async (parent, { _id }, context) => {
       if (context.user) {
@@ -46,14 +46,14 @@ const resolvers = {
         return team;
       }
 
-      throw AuthenticationError;
+      throw new AuthenticationError('unable to add team');
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });
       }
 
-      throw AuthenticationError;
+      throw new AuthenticationError('unable to update user');
     },
     updateTeam: async (parent, { teamID, pokemons }) => {
       if (context.user) {
@@ -68,13 +68,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw AuthenticationError;
+        throw new AuthenticationError('unable to find user');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw AuthenticationError;
+        throw new AuthenticationError('password is incorrect');
       }
 
       const token = signToken(user);
