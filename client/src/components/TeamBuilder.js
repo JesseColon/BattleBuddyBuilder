@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const API_URL = 'https://beta.pokeapi.co/graphql/v1beta';
 
@@ -84,3 +84,5 @@ function TeamBuilder() {
     );
 
 }
+
+export default TeamBuilder;
