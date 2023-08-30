@@ -22,12 +22,12 @@ const FloatingCard = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="container-fluid mt-4"> {/* Use container-fluid to make it full-width */}
       <div className="row">
-        <div className="col-md-6 offset-md-3">
+        <div className="col-12"> {/* Use col-12 to make it full-width */}
           <div className="card text-center">
             <div className="card-header">
-              Team Management
+             <h4> Team Management</h4>
             </div>
             <div className="card-body">
               <h5 className="card-title">Enter Your Team</h5>
