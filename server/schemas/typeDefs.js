@@ -42,9 +42,10 @@ const typeDefs = `
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addTeam(name: String!, pokemons: Pokemon!): Team
-    updateUser
-    addTeam(name: String!, pokemons: Pokemon!): Team
+    addTeam(name: String!, pokemons: [ID]): Team
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
+    updateTeam(teamID: Int!, pokemons: [ID]): Team
+  }
 `;
 
 module.exports = typeDefs;
