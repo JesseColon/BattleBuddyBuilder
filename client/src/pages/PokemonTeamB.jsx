@@ -11,7 +11,7 @@ const PokemonTeamB = () => {
     <div>
     
 <OptionTable/>
-<GridTable/>
+{/* <GridTable/> */}
 
 
       <main className="container">

@@ -46,22 +46,14 @@ const OptionTable = () => {
 
   return (
     <div>
-      <h1>Options Table</h1>
-      <table>
-        
+    
+      <h1>Battle Buddy Pokémon Team Builder</h1>
+      
           <tr>
-            <th>Options</th>
+            <th>Pokemon Table to Set Api</th>
           </tr>
-
         
-        <tr>
-          {options.map((option, index) => (
-            // <tr key={index}>
-              <td>{option}</td>
-            // </tr>
-          ))}
-       </tr>
-      </table>
+     
       <table class="table table-bordered border-primary" >
   <thead>
     <tr>
@@ -80,9 +72,9 @@ const OptionTable = () => {
   <tbody>
     <tr>
       <th scope="row">Normal</th>
+      <td>you will add text</td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td>the pkemon options</td>
       <td></td>
       <td></td>
       <td></td>
