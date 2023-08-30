@@ -1,12 +1,15 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_TEAMS = gql`
-  query team($: ID) {
-    pokemons(team: $Team) {
+export const QUERY_PRODUCTS = gql`
+  query getProducts($category: ID) {
+    products(category: $category) {
       _id
-      pokeID
-      itemID
-      moves {
+      name
+      description
+      price
+      quantity
+      image
+      category {
         _id
       }
     }

@@ -1,28 +1,31 @@
 const typeDefs = `
-
-  type Team {
+  type Category {
     _id: ID
     name: String
-    pokemons: [Pokemon]
   }
 
-  type Pokemon {
+  type Product {
     _id: ID
-    pokeID: Int!
-    itemID: Int
-    moves: [Move]
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
   }
 
-  type Move {
+  type Order {
     _id: ID
-    moveID: Int!
+    purchaseDate: String
+    products: [Product]
   }
 
   type User {
     _id: ID
-    username: String
+    firstName: String
+    lastName: String
     email: String
-    teams: [Team]
+    orders: [Order]
   }
 
   type Checkout {
@@ -30,21 +33,25 @@ const typeDefs = `
   }
 
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
 
   type Query {
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
     user: User
-    team(user:ID): [Team]
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-    addTeam(name: String!, pokemons: [ID]): Team
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateTeam(teamID: Int!, pokemons: [ID]): Team
+    updateProduct(_id: ID!, quantity: Int!): Product
+    login(email: String!, password: String!): Auth
   }
 `;
 

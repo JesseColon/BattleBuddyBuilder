@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
 import OptionTable from "./OptionTable";
 import PokemonCard from '../components/Nav/PokemonCard';
@@ -56,9 +56,18 @@ const Teams = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6">
-            <h1>We can add context here</h1>
+          
+            <h1>Welcome to Team Builder</h1>
           <div className="card mb-4">
-            <h1>Or add images - tell me what to add</h1>
+            <h4>Battle Buddy Builder's, Pokémon Team Builder is a tool that you can use to 
+              check the weaknesses and resistances of your entire team at a glance to spot 
+              any glaring holes in your team’s defensive coverage. It can be used both for 
+              casual or competitive purposes. It supports Pokémon Scarlet & Violet as well 
+              as older generations.
+
+              You can input up to 6 Pokémon for your team below, and you can also choose 
+              which generation to use. Pokémon unavailable in a generation will have text 
+              indicating this by the input field. </h4>
             {/* Existing card content */}
           </div>
         </div>
