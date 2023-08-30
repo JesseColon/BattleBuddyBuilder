@@ -1,4 +1,6 @@
 const { Schema, model } = require('mongoose');
+const Pokemon = require('./Pokemon');
+
 
 const teamSchema = new Schema({
     name: {
