@@ -10,9 +10,9 @@ import Signup from './pages/Signup';
 import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
-import Table from "./components/Nav/Table";
-import CreateTeams from './pages/CreateTeams';
-import ResultPage from './pages/ResultPage'; // Import your new page component
+// import Table from "./components/Nav/Table";
+// import CreateTeams from './pages/CreateTeams';
+// import ResultPage from './pages/ResultPage'; // Import your new page component
 
 
 const router = createBrowserRouter([
@@ -36,10 +36,7 @@ const router = createBrowserRouter([
       },{
         path: '/teams',
         element: <Teams />
-      }, {
-        path: '/orderHistory',
-        element: <OrderHistory />
-      }, {
+      },{
         path: '/pokemonTeamB',
         element: <PokemonTeamB />
       }
