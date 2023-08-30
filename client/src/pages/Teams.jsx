@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
 import OptionTable from "./OptionTable";
 import PokemonCard from '../components/Nav/PokemonCard';
+import FloatingCard from '../components/Nav/FloatingCard';
 
 
 const Teams = () => {
@@ -232,6 +233,9 @@ const Teams = () => {
       <br>
       </br>
 <OptionTable/>
+<br>
+</br>
+<FloatingCard/>
 {/* <GridTable/> */}
 
 </div>

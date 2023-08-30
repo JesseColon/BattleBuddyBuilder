@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Home from './pages/Home';
 // import Detail from './pages/Detail';
-import NoMatch from './pages/NoMatch';
+import NoMatch from './pages/NoMatch'; ///Do not delte as it will crash the page
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 // import Success from './pages/Success';
@@ -15,6 +15,7 @@ import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
 import OptionTable from './pages/OptionTable'; 
 import PokemonCard from '../src/components/Nav/PokemonCard';
+import FloatingCard from '../src/components/Nav/FloatingCard';
 
 const router = createBrowserRouter([
   {
@@ -51,7 +52,10 @@ const router = createBrowserRouter([
       },{
         path: '/pokemonCard',
         element: <PokemonCard/>
-      },
+      },{
+        path: '/FloatingCard',
+        element: <FloatingCard/>
+      }
       //  {
       //   path: '/orderHistory',
       //   element: <OrderHistory />
