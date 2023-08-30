@@ -2,35 +2,14 @@
 
 import React from 'react';
 
+import OptionTable from "./OptionTable";
+
 const PokemonTeamB = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a className="navbar-brand" href="#">Home</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Teams</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pokémon Team Builder</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Guides</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">TCG</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      <OptionTable/>
+{/* <GridTable/> */}
+ 
       <main className="container">
         <div className="row">
           {/* Your Pokemon team builder options go here */}
