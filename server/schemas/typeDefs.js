@@ -1,10 +1,32 @@
 const typeDefs = `
+
+  type Team {
+    _id: ID
+    name: String
+    pokemons: [Pokemon]
+  }
+
+  type Pokemon {
+    _id: ID
+    pokeID: Int!
+    itemID: Int
+    moves: [Move]
+  }
+
+  type Move {
+    _id: ID
+    moveID: Int!
+  }
+
   type User {
     _id: ID
     username: String
     email: String
-    password: String
-    thoughts: [Thought]!
+    teams: [Team]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type Auth {
