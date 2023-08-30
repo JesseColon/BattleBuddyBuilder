@@ -24,29 +24,29 @@ function Nav() {
         //     </a>
         //   </li>
         // </ul>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <Link className="navbar-brand" to="/">Home</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <Link class="navbar-brand" to="/">Home</Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/teams">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <Link class="nav-link" to="/teams">
                 Create a Team
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/PokemonTeamB">
+            <li class="nav-item">
+              <Link class="nav-link" to="/PokemonTeamB">
                 Pokemon-Team-Page
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/picachu">
-                Picachu
+            <li class="nav-item">
+              <Link class="nav-link" to="/pikachu">
+                Pikachu
               </Link>
             </li>
-            <li className="nav-item">
+            <li class="nav-item">
               <Link to="/" onClick={() => Auth.logout()} className="nav-link">
                 Logout
               </Link>
@@ -77,29 +77,29 @@ function Nav() {
         //   </li>
         // </ul>
 
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <Link className="navbar-brand" to="/">Home</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <Link class="navbar-brand" to="/">Home</Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-                <li className="nav-item active">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
                 <Link  className ='text-light mr-2' to="/login">
                Login
                </Link> 
                 </li>
              
-                <li className="nav-item">
+                <li class="nav-item">
                 <Link className ='text-light' to="/signup">
                 Signup
                </Link>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">View all Team Builds</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View all Team Builds</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Guides</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Guides</a>
                 </li>
              
              
@@ -119,7 +119,7 @@ function Nav() {
      <nav>{showNavigation()}</nav>
      {/* Conditionally render the header based on authentication state and route */}
      {Auth.loggedIn() && !isHomePage ? null : (
-       <header className="jumbotron text-center">
+       <header class="jumbotron text-center">
          <h1>Welcome to Battle Buddy Builder</h1>
        </header>
      )}
