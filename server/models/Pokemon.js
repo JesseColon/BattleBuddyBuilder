@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const Moves = require('./Moves');
+const Moves = require('./Move');
 
 const pokeSchema = new Schema({
     pokeID: {
