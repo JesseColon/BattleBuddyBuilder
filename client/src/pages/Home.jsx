@@ -1,9 +1,5 @@
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
-import Cart from "../components/Cart";
-import Youtube from '../components/Nav/Youtube';
-
-
+//import React from "react";
+import { Card, CardGroup } from "react-bootstrap"; // Import Card and CardGroup
 
 const Home = () => {
   return (
@@ -62,7 +58,7 @@ const Home = () => {
         </div>
     </div>
 
-    <Youtube/>
+
 
     </div>
   );

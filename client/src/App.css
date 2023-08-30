@@ -3,20 +3,16 @@
 }
 
 /* Navigation bar */
-.navbar {
-    height: 85px;
-    font-size: larger;
+.navbar-nav {
+font-size: larger;
 }
 
 /* This is for the bottom for saving team */
 .card.text-center {
-    background-color: #b8daff;
+    background-color: #00bcd4;
     width: 1097px;
 }
 
-.card.rounded-lg {
-    font-size: larger;
-}
 
 
         /* Custom CSS for the lighting effect */
