@@ -51,16 +51,7 @@ function Nav() {
                 Logout
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/OrderHistory">
-                Oder History
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/CreateTeams">
-                Create Teams
-              </Link>
-            </li>
+            
           </ul>
         </div>
       </nav>

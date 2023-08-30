@@ -10,10 +10,9 @@ import Signup from './pages/Signup';
 import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
-// import Table from "./components/Nav/Table";
-// import CreateTeams from './pages/CreateTeams';
-// import ResultPage from './pages/ResultPage'; // Import your new page component
-
+import OptionTable from './pages/OptionTable'; 
+import PokemonCard from '../src/components/Nav/PokemonCard';
+import FloatingCard from '../src/components/Nav/FloatingCard';
 
 const router = createBrowserRouter([
   {
@@ -36,10 +35,27 @@ const router = createBrowserRouter([
       },{
         path: '/teams',
         element: <Teams />
-      },{
+      }, {
         path: '/pokemonTeamB',
         element: <PokemonTeamB />
+      },{
+        path: '/optionTable',
+        element: <OptionTable/>
+      },{
+        path: '/pokemonCard',
+        element: <PokemonCard/>
+      },{
+        path: '/FloatingCard',
+        element: <FloatingCard/>
       }
+      //  {
+      //   path: '/orderHistory',
+      //   element: <OrderHistory />
+      // }, 
+      // {
+      //   path: '/products/:id',
+      //   element: <Detail />
+      // }
     ]
   }
 ]);

@@ -1,7 +1,7 @@
 // This is the New Picachu page to add information 
 
 
-const Pikachu = () =>{
+const Picachu = () =>{
     return (
         <div className="container">
           <div className="row">
@@ -68,4 +68,4 @@ const Pikachu = () =>{
       );
     };
 
-    export default Pikachu;
+    export default Picachu;
