@@ -46,23 +46,27 @@ const PokemonCard = () => {
     <div className="container">
       <div className="row">
         {pokemonNames.map((name, index) => (
-          <div className="col-md-4" key={index}>
+          <div className="col-md-6" key={index}>
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Pokemon {index + 1}</h5>
-                <input
-                  type="text"
-                  className="form-control mb-2"
-                  placeholder="Enter Pokemon Name"
-                  value={name}
-                  onChange={(e) => handleInputChange(e, index)}
-                />
-                <button
-                  className="btn btn-primary mb-2"
-                  onClick={() => handlePokemonSubmit(index)}
-                >
-                  Submit
-                </button>
+                <div className="input-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Enter Pokemon Name"
+                    value={name}
+                    onChange={(e) => handleInputChange(e, index)}
+                  />
+                  <div className="input-group-append">
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => handlePokemonSubmit(index)}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
                 {pokemonData[index] && (
                   <div>
                     <p>Name: {pokemonData[index].name}</p>
