@@ -1,3 +1,19 @@
+.table {
+    background-color: sandybrown;
+}
+
+/* Navigation bar */
+.navbar-nav {
+font-size: larger;
+}
+
+/* This is for the bottom for saving team */
+.card.text-center {
+    background-color: #00bcd4;
+    width: 1097px;
+}
+
+
 
         /* Custom CSS for the lighting effect */
         .jumbotron h1 {

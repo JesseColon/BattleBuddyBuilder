@@ -1,5 +1,8 @@
 import  { useState } from 'react';
 import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropdown, Button, and ButtonGroup from React Bootstrap
+import OptionTable from "./OptionTable";
+import PokemonCard from '../components/Nav/PokemonCard';
+import FloatingCard from '../components/Nav/FloatingCard';
 
 
 const Teams = () => {
@@ -16,9 +19,6 @@ const Teams = () => {
   const [selectedPokemon3, setSelectedPokemon3] = useState('');
   const [selectedPokemon4, setSelectedPokemon4] = useState('');
   const [selectedPokemon5, setSelectedPokemon5] = useState('');
-
-  
-
 
   // Function to handle dropdown selection for each menu
   const handleDropdownSelect = (name, menuNumber) => {
@@ -227,11 +227,21 @@ const Teams = () => {
           </div>
         </div>
       </div>
-    </div>
+    <br>
+    </br>
+      <PokemonCard/>
+      <br>
+      </br>
+<OptionTable/>
+<br>
+</br>
+<FloatingCard/>
+{/* <GridTable/> */}
+
+</div>
 
 
-)
-              };
-
+  );
+};
 
 export default Teams;
