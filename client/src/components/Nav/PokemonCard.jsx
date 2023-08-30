@@ -10,20 +10,24 @@ const PokemonCard = () => {
 
   useEffect(() => {
     // Fetch Pokémon data when the component mounts or when pokemonNames change
-    const fetchData = async () => {
-      const promises = pokemonNames.map(async (name) => {
-        if (name !== '') {
-          const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
-          return response.data;
-        }
-        return null;
-      });
-
-      const data = await Promise.all(promises);
-      setPokemonData(data);
+    const fetchData = async (index) => {
+      const name = pokemonNames[index];
+      if (name !== '') {
+        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
+        const data = response.data;
+        setPokemonData((prevData) => {
+          const newData = [...prevData];
+          newData[index] = data;
+          return newData;
+        });
+      }
     };
 
-    fetchData();
+    pokemonNames.forEach((name, index) => {
+      if (name !== '') {
+        fetchData(index);
+      }
+    });
   }, [pokemonNames]);
 
   // Function to handle input changes
@@ -31,6 +35,11 @@ const PokemonCard = () => {
     const updatedNames = [...pokemonNames];
     updatedNames[index] = e.target.value;
     setPokemonNames(updatedNames);
+  };
+
+  // Function to handle individual Pokémon submission
+  const handlePokemonSubmit = (index) => {
+    fetchData(index);
   };
 
   return (
@@ -48,6 +57,12 @@ const PokemonCard = () => {
                   value={name}
                   onChange={(e) => handleInputChange(e, index)}
                 />
+                <button
+                  className="btn btn-primary mb-2"
+                  onClick={() => handlePokemonSubmit(index)}
+                >
+                  Submit
+                </button>
                 {pokemonData[index] && (
                   <div>
                     <p>Name: {pokemonData[index].name}</p>

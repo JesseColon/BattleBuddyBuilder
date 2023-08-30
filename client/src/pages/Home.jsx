@@ -5,9 +5,11 @@ import Cart from "../components/Cart";
 const Home = () => {
   return (
     <div className="container">
-      <CategoryMenu />
+      
+      {/* REmind me to delete these they are here to change later */}
+      {/* <CategoryMenu /> */}
       {/* <ProductList /> */}
-      <Cart />
+      {/* <Cart /> */}
 
       <div class="container text-center">
   <div class="row">
