@@ -1,5 +1,4 @@
 const { User, Team, Pokemon, Move } = require('../models');
-const Pokemon = require('../models/Pokemon');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
