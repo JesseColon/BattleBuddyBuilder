@@ -31,6 +31,10 @@ const FloatingCard = () => {
             </div>
             <div className="card-body">
               <h5 className="card-title">Enter Your Team</h5>
+              <p>If you have any teams saved to your web browser, 
+                you can load them from the dropdown list here. 
+                (Loading a saved team will overwrite whatever you have
+                 inputted above.)</p>
               <input
                 type="text"
                 className="form-control mb-3"
@@ -46,6 +50,10 @@ const FloatingCard = () => {
               </button>
               <hr />
               <h5 className="card-title">Load Team</h5>
+              <p>The Team Code can be used to share teams. 
+                Copy this code to save it for later, or paste a 
+                Team Code you have in this box to load it 
+                (overwriting whatever you have inputted above).</p>
               <input
                 type="text"
                 className="form-control mb-3"
