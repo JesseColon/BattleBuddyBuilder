@@ -3,7 +3,7 @@ import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropd
 import OptionTable from "./OptionTable";
 import PokemonCard from '../components/Nav/PokemonCard';
 import FloatingCard from '../components/Nav/FloatingCard';
-import { getAllPokemon } from './utils/pokemonData'
+//import { getAllPokemon } from './utils/pokemonData'
 
 const Teams = () => {
   // Arrays of Pokémon names
