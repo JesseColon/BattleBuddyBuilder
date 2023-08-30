@@ -15,9 +15,11 @@ const Home = () => {
   <div class="row">
     <div class="col order-last">
       First in DOM, ordered last
+      <p> We will add some information hwere</p>
     </div>
     <div class="col">
       Second in DOM, unordered
+      <p> We will add some information hwere</p>
     </div>
     <div class="col order-first">
       <h1>Who we are!</h1>
