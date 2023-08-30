@@ -4,12 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
 import Home from './pages/Home';
-// import Detail from './pages/Detail';
-import NoMatch from './pages/NoMatch'; ///Do not delte as it will crash the page
+import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-// import Success from './pages/Success';
-// import OrderHistory from './pages/OrderHistory';
 import Pikachu from './pages/Pikachu';
 import Teams from  './pages/Teams';
 import PokemonTeamB from './pages/PokemonTeamB';
@@ -32,12 +29,7 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      }, 
-      // {
-      //   path: '/success',
-      //   element: <Success />
-      // },
-      {
+      },{
         path: '/pikachu',
         element: <Pikachu />
       },{
