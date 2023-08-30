@@ -3,8 +3,9 @@
 }
 
 /* Navigation bar */
-.navbar-nav {
-font-size: larger;
+.navbar {
+    height: 85px;
+    font-size: larger;
 }
 
 /* This is for the bottom for saving team */
@@ -13,6 +14,9 @@ font-size: larger;
     width: 1097px;
 }
 
+.card.rounded-lg {
+    font-size: larger;
+}
 
 
         /* Custom CSS for the lighting effect */
