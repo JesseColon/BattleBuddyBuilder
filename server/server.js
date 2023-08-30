@@ -6,6 +6,12 @@ const { authMiddleware } = require('./utils/auth');
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+//const mongoose = require('mongoose');
+
+// mongoose.connect('mongodb://localhost:27017/mydb', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 const PORT = process.env.PORT || 3001;
 const app = express();

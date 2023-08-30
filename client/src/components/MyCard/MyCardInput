@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 const MyApiComponent = () => {
   const [userInput, setUserInput] = useState(''); // State to store user input
