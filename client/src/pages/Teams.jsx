@@ -56,6 +56,7 @@ const Teams = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6">
+          
             <h1>Welcome to Team Builder</h1>
           <div className="card mb-4">
             <h4>Battle Buddy Builder's, Pokémon Team Builder is a tool that you can use to 
