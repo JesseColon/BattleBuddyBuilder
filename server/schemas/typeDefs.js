@@ -20,7 +20,8 @@ const typeDefs = `
 
   type User {
     _id: ID
-    username: String
+    firstName: String
+    lastName: String
     email: String
     teams: [Team]
   }
@@ -40,7 +41,7 @@ const typeDefs = `
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addTeam(name: String!, pokemons: [ID]): Team
     updateUser(firstName: String, lastName: String, email: String, password: String): User
