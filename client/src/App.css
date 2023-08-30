@@ -1,4 +1,13 @@
+.table {
+    background-color: sandybrown;
+}
 
+/* Navigation bar */
+.navbar-nav {
+font-size: larger;
+}
+        
+        
         /* Custom CSS for the lighting effect */
         .jumbotron h1 {
           font-size: 3rem; /* Adjust font size as needed */
