@@ -1,5 +1,7 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema, model } = mongoose;
 const bcrypt = require('bcrypt');
+const Team = require('./Team');
 
 const userSchema = new Schema({
   username: {
@@ -19,12 +21,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  teams: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Team',
-    },
-  ],
+  // teams: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: 'Team',
+  //   },
+  // ],
 });
 
 userSchema.pre('save', async function (next) {
@@ -40,6 +42,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

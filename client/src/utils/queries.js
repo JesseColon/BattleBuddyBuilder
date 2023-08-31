@@ -53,13 +53,9 @@ export const QUERY_USER = gql`
       orders {
         _id
         purchaseDate
-        products {
+        teams {
           _id
           name
-          description
-          price
-          quantity
-          image
         }
       }
     }
