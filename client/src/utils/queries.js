@@ -50,12 +50,11 @@ export const QUERY_USER = gql`
     user {
       firstName
       lastName
-      orders {
+      teams {
         _id
-        purchaseDate
-        teams {
+        name
+        pokemons {
           _id
-          name
         }
       }
     }
