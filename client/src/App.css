@@ -3,14 +3,26 @@
 }
 
 /* Navigation bar */
-.navbar-nav {
-font-size: larger;
+.navbar {
+    font-size: x-large;
 }
 
 /* This is for the bottom for saving team */
 .card.text-center {
     background-color: #00bcd4;
     width: 1097px;
+}
+
+.card-body {
+    background-color:azure ;
+    font-size: x-large;
+    border: 8px solid #ccc;
+    padding: 14px;
+}
+
+.text-center {
+    background-color: azure;
+    
 }
 
 

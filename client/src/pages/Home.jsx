@@ -53,8 +53,8 @@ const Home = () => {
                 franchise created by Satoshi Tajiri and Ken Sugimori. These creatures 
                 come in a wide variety of species, each with its own unique abilities, 
                 characteristics, and types. Trainers, who are individuals within the 
-                Pokémon universe, capture and train these creatures to battle other t
-                rainers and achieve various goals, such as becoming Pokémon Champions 
+                Pokémon universe, capture and train these creatures to battle other 
+                trainers and achieve various goals, such as becoming Pokémon Champions 
                 or completing a Pokédex, an encyclopedia of Pokémon species. Pokémon has 
                 grown into a global phenomenon, spanning video games, trading card games, 
                 animated TV series, movies, and merchandise, captivating the hearts of 
@@ -63,8 +63,10 @@ const Home = () => {
             </div>
         </div>
     </div>
-
+<br></br>
     <Youtube/>
+    <br></br>
+    <br></br>
 
     </div>
   );
