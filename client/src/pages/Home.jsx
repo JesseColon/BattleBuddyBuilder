@@ -2,7 +2,8 @@
 import { Card, CardGroup } from "react-bootstrap"; // Import Card and CardGroup
 import Youtube from '../components/Nav/Youtube';
 // import Login2 from './login2';
-
+import Login from './Login';
+import Signup from './Signup';
 
 
 const Home = () => {
@@ -15,7 +16,8 @@ const Home = () => {
         
     </header>
 {/* <Login2 /> */}
-      
+<Login /> , <Signup />
+
       {/* REmind me to delete these they are here to change later */}
       {/* <CategoryMenu /> */}
       {/* <ProductList /> */}
