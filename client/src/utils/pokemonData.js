@@ -9,5 +9,15 @@ const getPokemonById = async (pokemonId) => {
     return null;
   }
 };
+const getAllPokemon = async () => {
+  try {
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching Pokemon data:', error);
+    return null;
+  }
+};
 
 module.exports = getPokemonById;
+module.exports = getAllPokemon;

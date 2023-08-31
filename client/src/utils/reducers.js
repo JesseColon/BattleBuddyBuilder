@@ -20,11 +20,10 @@ export const reducer = (state, action) => {
         products: [...action.products],
       };
 
-    case ADD_TO_CART:
+    case ADD_TO_TEAM:
       return {
         ...state,
-        cartOpen: true,
-        cart: [...state.cart, action.product],
+        team: [...state.team, action.pokemon],
       };
     case ADD_MULTIPLE_TO_CART:
       return {
@@ -47,17 +46,16 @@ export const reducer = (state, action) => {
 
     // First we iterate through each item in the cart and check to see if the `product._id` matches the `action._id`
     // If so, we remove it from our cart and set the updated state to a variable called `newState`
-    case REMOVE_FROM_CART:
-      let newState = state.cart.filter((product) => {
-        return product._id !== action._id;
+    case REMOVE_FROM_TEAM:
+      let newState = state.team.filter((pokemon) => {
+        return pokemon._id !== action._id;
       });
 
       // Then we return a copy of state and check to see if the cart is empty.
       // If not, we set the cartOpen status to  `true`. Then we return an updated cart array set to the value of `newState`.
       return {
         ...state,
-        cartOpen: newState.length > 0,
-        cart: newState,
+        team: newState,
       };
 
     case CLEAR_CART:
