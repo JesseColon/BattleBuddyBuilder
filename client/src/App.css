@@ -14,17 +14,19 @@
 }
 
 .card-body {
-    background-color:azure ;
+    background-color:#c6eaea ;
     font-size: x-large;
     border: 8px solid #ccc;
     padding: 14px;
 }
 
 .text-center {
-    background-color: azure;
-    
-}
+    /* background-color: #c6eaea; */
+    }
 
+.btn.btn-danger {
+
+    }
 
 
         /* Custom CSS for the lighting effect */

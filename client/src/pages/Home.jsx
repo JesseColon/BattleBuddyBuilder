@@ -1,6 +1,10 @@
 //import React from "react";
 import { Card, CardGroup } from "react-bootstrap"; // Import Card and CardGroup
 import Youtube from '../components/Nav/Youtube';
+// import Login2 from './login2';
+
+
+
 const Home = () => {
   return (
     <div className="container">
@@ -8,8 +12,9 @@ const Home = () => {
 <header class="jumbotron text-center">
         <h1>Welcome to Battle Buddy Builder</h1>
 
+        
     </header>
-
+{/* <Login2 /> */}
       
       {/* REmind me to delete these they are here to change later */}
       {/* <CategoryMenu /> */}
@@ -75,3 +80,40 @@ const Home = () => {
 export default Home;
 
 // https://www.youtube.com/embed/Zyt2GKb6qWw
+
+// import React from "react";
+// import { Link, useLocation } from "react-router-dom";
+
+// function Nav() {
+//   const location = useLocation();
+
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+//       <Link className="navbar-brand" to="/">Home</Link>
+//       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+//         <span className="navbar-toggler-icon"></span>
+//       </button>
+//       <div className="collapse navbar-collapse" id="navbarNav">
+//         <ul className="navbar-nav">
+//           <li className="nav-item">
+//             <Link className="nav-link" to="/teams">
+//               Create a Team
+//             </Link>
+//           </li>
+//           <li className="nav-item">
+//             <Link className="nav-link" to="/PokemonTeamB">
+//               Pokemon-Team-Page
+//             </Link>
+//           </li>
+//           <li className="nav-item">
+//             <Link className="nav-link" to="/picachu">
+//               Picachu
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// }
+
+// export default Nav;

@@ -14,6 +14,7 @@ import OptionTable from './pages/OptionTable';
 import PokemonCard from '../src/components/Nav/PokemonCard';
 import FloatingCard from '../src/components/Nav/FloatingCard';
 import Youtube from '../src//components/Nav/Youtube';
+import Login2 from './pages/login2';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
       }, {
         path: '/login',
         element: <Login />
-      }, {
+      },{
+        path: '/login2',
+        element: <Login2 />
+      }, 
+      {
         path: '/signup',
         element: <Signup />
       },{

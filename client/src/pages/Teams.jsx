@@ -56,9 +56,11 @@ const Teams = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6">
-            <h1>We can add context here</h1>
+            <h1>Please make a selection from the drop down menu. 
+              You will be able to select from various Pokemon to 
+              see their strength, weakness and their sprite!</h1>
           <div className="card mb-4">
-            <h1>Or add images - tell me what to add</h1>
+        
             {/* Existing card content */}
           </div>
         </div>

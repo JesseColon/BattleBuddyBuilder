@@ -1,3 +1,6 @@
+
+// https://www.youtube.com/embed/Zyt2GKb6qWw
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -23,8 +26,8 @@ function Nav() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/picachu">
-              Picachu
+            <Link className="nav-link" to="/pikachu">
+              Pikachu
             </Link>
           </li>
         </ul>
