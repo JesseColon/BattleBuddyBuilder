@@ -3,11 +3,12 @@ import { Dropdown, ButtonGroup, Button } from 'react-bootstrap'; // Import Dropd
 import OptionTable from "./OptionTable";
 import PokemonCard from '../components/Nav/PokemonCard';
 import FloatingCard from '../components/Nav/FloatingCard';
+//const getPokemonById = require('./utils/pokemonData');
 //import { getAllPokemon } from './utils/pokemonData'
 
 const Teams = () => {
   // Arrays of Pokémon names
-  const pokemonNames1 = [getAllPokemon()];
+  const pokemonNames1 = ["", "Mewtwo", "Gengar", "Dragonite", "Vaporeon", "Snorlax"];
   const pokemonNames2 = ["", "Mewtwo", "Gengar", "Dragonite", "Vaporeon", "Snorlax"];
   const pokemonNames3 = ["", "Machamp", "Lapras", "Arcanine", "Mew", "Alakazam"];
   const pokemonNames4 = ["", "Gyarados", "Golem", "Aerodactyl", "Kabutops", "Omastar"];
@@ -87,7 +88,7 @@ const Teams = () => {
                 <div className="card">
                   <img src={`/images/${selectedPokemon1.toLowerCase()}.jpg`} className="card-img-top" alt={selectedPokemon1} />
                   <div className="card-body">
-                    <h2 className="card-title">{selectedPokemon1}</h2>
+                    <h2 className="card-title">{getPokemonById(1).name}</h2>
                     {/* Add more information about the selected Pokémon if needed */}
                   </div>
                 </div>

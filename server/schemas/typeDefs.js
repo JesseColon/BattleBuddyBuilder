@@ -26,10 +26,6 @@ const typeDefs = `
     teams: [Team]
   }
 
-  type Checkout {
-    session: ID
-  }
-
   type Auth {
     token: ID!
     user: User
