@@ -13,6 +13,7 @@ import PokemonTeamB from './pages/PokemonTeamB';
 import OptionTable from './pages/OptionTable'; 
 import PokemonCard from '../src/components/Nav/PokemonCard';
 import FloatingCard from '../src/components/Nav/FloatingCard';
+import Youtube from '../src//components/Nav/Youtube';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       },{
         path: '/FloatingCard',
         element: <FloatingCard/>
+      }, 
+      {
+        path: '/Youtube',
+        element: <Youtube/>
       }
       //  {
       //   path: '/orderHistory',

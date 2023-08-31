@@ -1,9 +1,15 @@
 //import React from "react";
 import { Card, CardGroup } from "react-bootstrap"; // Import Card and CardGroup
-
+import Youtube from '../components/Nav/Youtube';
 const Home = () => {
   return (
     <div className="container">
+
+<header class="jumbotron text-center">
+        <h1>Welcome to Battle Buddy Builder</h1>
+
+    </header>
+
       
       {/* REmind me to delete these they are here to change later */}
       {/* <CategoryMenu /> */}
@@ -49,8 +55,8 @@ const Home = () => {
                 characteristics, and types. Trainers, who are individuals within the 
                 Pokémon universe, capture and train these creatures to battle other t
                 rainers and achieve various goals, such as becoming Pokémon Champions 
-                or completing a Pokédex, an encyclopedia of Pokémon species. Pokémon has g
-                rown into a global phenomenon, spanning video games, trading card games, 
+                or completing a Pokédex, an encyclopedia of Pokémon species. Pokémon has 
+                grown into a global phenomenon, spanning video games, trading card games, 
                 animated TV series, movies, and merchandise, captivating the hearts of 
                 fans of all ages and fostering a sense of adventure, camaraderie, and 
                 exploration in its vast and enchanting world..</p>
@@ -58,10 +64,12 @@ const Home = () => {
         </div>
     </div>
 
-
+    <Youtube/>
 
     </div>
   );
 };
 
 export default Home;
+
+// https://www.youtube.com/embed/Zyt2GKb6qWw
