@@ -3,15 +3,16 @@ const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
-
+//require('dotenv').config();
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-//const mongoose = require('mongoose');
+const { mongoose } = require('mongoose');
 
-// mongoose.connect('mongodb://localhost:27017/mydb', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
+
+//  mongoose.connect('mongodb://localhost:27017/mydb', {
+//    useNewUrlParser: true,
+//    useUnifiedTopology: true,
+//  });
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -41,14 +42,18 @@ const startApolloServer = async () => {
       res.sendFile(path.join(__dirname, '../client/dist/index.html'));
     });
   }
+  // await mongoose.connect(process.env.MONGO_URI, {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true,
+  // });
 
-  db.once('open', () => {
-    app.listen(PORT, () => {
-      console.log(`API server running on port ${PORT}!`);
-      console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+    console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+    
     });
-  });
-};
+  };
+
 
 // Call the async function to start the server
 startApolloServer();

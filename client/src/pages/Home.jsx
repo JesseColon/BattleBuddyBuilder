@@ -10,17 +10,17 @@ const Home = () => {
       {/* <ProductList /> */}
       {/* <Cart /> */}
 
-      <div class="container text-center">
-  <div class="row">
-    <div class="col order-last">
+      <div className="container text-center">
+  <div className="row">
+    <div className="col order-last">
       First in DOM, ordered last
       <p> We will add some information hwere</p>
     </div>
-    <div class="col">
+    <div className="col">
       Second in DOM, unordered
       <p> We will add some information hwere</p>
     </div>
-    <div class="col order-first">
+    <div className="col order-first">
       <h1>Who we are!</h1>
     <p>
           A dedicated group of fans of Pokémon that have come together to create online platforms 
@@ -38,11 +38,11 @@ const Home = () => {
 
   
 
-      <div class="container mt-5">
-        <div class="card rounded-lg">
-            <div class="card-body">
-                <h5 class="card-title">What are Pokémon</h5>
-                <p class="card-text">Pokémon, short for "Pocket Monsters," are fictional 
+      <div className="container mt-5">
+        <div className="card rounded-lg">
+            <div className="card-body">
+                <h5 className="card-title">What are Pokémon</h5>
+                <p className="card-text">Pokémon, short for "Pocket Monsters," are fictional 
                 creatures that inhabit a rich and imaginative world in the popular 
                 franchise created by Satoshi Tajiri and Ken Sugimori. These creatures 
                 come in a wide variety of species, each with its own unique abilities, 
